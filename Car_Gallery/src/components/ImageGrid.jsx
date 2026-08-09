@@ -7,18 +7,16 @@ const ImageGrid = ({
 }) => {
   if (!images.length) {
     return (
-      <div className="py-24 text-center">
-
+      <div className="py-20 text-center">
         <h2 className="text-3xl font-semibold text-slate-400">
-          No images found.
+          No cars found.
         </h2>
-
       </div>
     );
   }
 
   return (
-    <section
+    <div
       className="
         grid
         gap-8
@@ -37,7 +35,7 @@ const ImageGrid = ({
           onFavorite={toggleFavorite}
         />
       ))}
-    </section>
+    </div>
   );
 };
 

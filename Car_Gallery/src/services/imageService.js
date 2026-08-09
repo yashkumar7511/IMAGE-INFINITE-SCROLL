@@ -6,17 +6,17 @@ export const getCarImages = async (
 ) => {
   try {
     const { data } = await unsplash.get("/search/photos", {
-     params: {
+      params: {
         query: `${query} car`,
         page,
         per_page: 12,
         orientation: "landscape",
-        },
+      },
     });
 
     return data.results;
   } catch (error) {
-    console.error("Error fetching images:", error);
+    console.error(error);
     return [];
   }
 };
